@@ -111,32 +111,24 @@ int main()
         printf("\n");
     }
 
-    Row=0;
-	//for(byte Module = 1; Module <= MAXMATRIX_NUMBER_OF_MODULES; Module++) {
-		for(Column = 0; Column < MAXMATRIX_COLUMN_NUMBER_OF_MODULE; Column++) {
-            writeBit(BufferRotated[Column], MAXMATRIX_ROW_NUMBER_OF_MODULE-Row-1, readBit(RowValue, BitPos));
-            BitPos++;
-		}
-	//}
-
-//    printf("\n Bit rotation 90\n");
-//    ColumnRotated = 0;
-//    for(Module = 1; Module <= MAXMATRIX_NUMBER_OF_MODULES; Module++)
-//    {
-//        for(Row = MAXMATRIX_ROW_NUMBER_OF_MODULE-1; Row >= 0; Row--)
-//        {
-//            RowRotated = MAXMATRIX_ROW_NUMBER_OF_MODULE-1;
-//            for(Column = MAXMATRIX_COLUMN_NUMBER_OF_MODULE*Module-1; Column >= MAXMATRIX_COLUMN_NUMBER_OF_MODULE*(Module-1); Column--)
-//            {
-//                Bit = readBit(Buffer[Column], Row);
-//                writeBit(BufferRotated[ColumnRotated], RowRotated, readBit(Buffer[Column], Row));
-//                RowRotated--;
-//                printf("%d,", Bit);
-//            }
-//            ColumnRotated++;
-//            printf("\n");
-//        }
-//    }
+    printf("\n Bit rotation 90\n");
+    ColumnRotated = 0;
+    for(Module = 1; Module <= MAXMATRIX_NUMBER_OF_MODULES; Module++)
+    {
+        for(Row = MAXMATRIX_ROW_NUMBER_OF_MODULE-1; Row >= 0; Row--)
+        {
+            RowRotated = MAXMATRIX_ROW_NUMBER_OF_MODULE-1;
+            for(Column = MAXMATRIX_COLUMN_NUMBER_OF_MODULE*Module-1; Column >= MAXMATRIX_COLUMN_NUMBER_OF_MODULE*(Module-1); Column--)
+            {
+                Bit = readBit(Buffer[Column], Row);
+                writeBit(BufferRotated[ColumnRotated], RowRotated, readBit(Buffer[Column], Row));
+                RowRotated--;
+                printf("%d,", Bit);
+            }
+            ColumnRotated++;
+            printf("\n");
+        }
+    }
 
 //    printf("\n Bit rotation 270\n");
 //    ColumnRotated = 0;

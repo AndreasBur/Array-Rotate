@@ -15,7 +15,7 @@ char array_trans[8][8];
 int main()
 {
     int i,a;
-    printf("\n original\n");
+    printf("\n origin\n");
     for(i = 0; i <= 7; i++)
     {
         for(a = 0; a <= 7; a++)
@@ -25,15 +25,15 @@ int main()
         printf("\n");
     }
 
-//    printf("\n mirrored\n");
-//    for(i = 0; i <= 7; i++)
-//    {
-//        for(a = 0; a <= 7; a++)
-//        {
-//            printf("%i,",array[a][i]);
-//        }
-//        printf("\n");
-//    }
+    printf("\n mirrored\n");
+    for(i = 0; i <= 7; i++)
+    {
+        for(a = 0; a <= 7; a++)
+        {
+            printf("%i,",array[a][i]);
+        }
+        printf("\n");
+    }
 
     printf("\n rotation 90\n");
     for(i = 0; i < 8; i++)

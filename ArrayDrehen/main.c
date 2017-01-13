@@ -21,9 +21,33 @@ int main()
         for(a = 0; a <= 7; a++)
         {
             printf("%i,",array[i][a]);
+            array_trans[i][a] = array[i][a];
         }
         printf("\n");
     }
+
+    printf("\n test\n");
+    for(a = 0; a <= 6; a++)
+    {
+        array_trans[0][a] = array[0][a+1];
+        array_trans[a][7] = array[a+1][7];
+    }
+
+    for(a = 7; a > 0; a--)
+    {
+        array_trans[7][a] = array[7][a-1];
+        array_trans[a][0] = array[a-1][0];
+    }
+
+    //array_trans[0][7] = array[1][7];
+    //array_trans[7][7] = array[7][6];
+
+    for(a = 0; a <= 6; a++)
+    {
+        array_trans[0][a] = array[0][a+1];
+        array_trans[a][7] = array[a+1][7];
+    }
+
 
     printf("\n mirrored\n");
     for(i = 0; i <= 7; i++)
@@ -56,6 +80,16 @@ int main()
     {
         for(a = 0; a <= 7; a++)
             printf("%d,", array[a][i]);
+        printf("\n");
+    }
+
+    printf("\n Array Trans\n");
+    for(i = 0; i <= 7; i++)
+    {
+        for(a = 0; a <= 7; a++)
+        {
+            printf("%i,",array_trans[i][a]);
+        }
         printf("\n");
     }
 

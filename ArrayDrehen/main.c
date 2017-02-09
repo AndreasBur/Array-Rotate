@@ -42,11 +42,11 @@ int main()
     //array_trans[0][7] = array[1][7];
     //array_trans[7][7] = array[7][6];
 
-    for(a = 0; a <= 6; a++)
-    {
-        array_trans[0][a] = array[0][a+1];
-        array_trans[a][7] = array[a+1][7];
-    }
+    //for(a = 0; a <= 6; a++)
+    //{
+        //array_trans[0][a] = array[0][a+1];
+        //array_trans[a][7] = array[a+1][7];
+    //}
 
 
     printf("\n mirrored\n");
